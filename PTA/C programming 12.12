@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main(){
+	double x1, y1, x2, y2,add,addi,mul,muli;
+	scanf("%lf %lf %lf %lf", &x1, &y1, &x2, &y2);
+	add = x1 + x2;
+	addi = y1 + y2;
+	mul = x1 * x2 - y1 * y2;
+	muli = x1 * y2 + x2 * y1;
+	printf("addition of complex is %lf+%lfi\nproduct of complex is %lf+%lfi", add, addi, mul, muli);
+}
+
+----------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+int a[11],b[11];
+int n;
+void find(int a[],int b[],int x)
+{
+    if(x==n+1)
+    {
+        for(int i=1; i<=n; i++)
+            printf("%d",b[i]);
+        printf("\n");
+    }
+    for(int i=1; i<=n; i++)
+    {
+        if(a[i]==0)
+        {
+            a[i]=1;
+            b[x]=i;
+            find(a,b,x+1);
+            a[i]=0;
+        }
+    }
+}
+int main()
+{
+    scanf("%d",&n);
+    find(a,b,1);
+    return 0;
+}
+
+----------------------------------------------
