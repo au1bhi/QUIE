@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"Hello World!";
+}
+
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"Welcome to You!";
+}
+
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"Programming in C is fun!";
+}
+
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"****"<<endl;
+    cout<<"***"<<endl;
+    cout<<"**"<<endl;
+    cout<<"*";
+}
+
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"  A"<<endl;
+    cout<<"A   A"<<endl;
+    cout<<"  A";
+}
+
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"************"<<endl;
+    cout<<"  Welcome"<<endl;
+    cout<<"************";
+}
+--------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    double F=150,C;
+    C=5*(F-32)/9;
+    cout<<"fahr = 150, celsius = "<<(int)C;
+    return 0;
+}
+--------------------------------
