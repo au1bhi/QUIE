@@ -1,0 +1,47 @@
+void ShowDayWeek(int dow) {
+    if (dow<0||dow>6){
+        return 0;
+    }
+    const char *chs[] = { "日", "一","二" ,"三","四","五","六" };
+    printf(chs[dow]);
+}
+
+-----------------------------------
+int narcissistic(int number) {
+    int temp[5] = { 0 }, k = 0, sum = 0, t = number;
+    while (t != 0) {
+        temp[k] = t % 10;
+        t /= 10;
+        k++;
+    }
+    if (k == 3) {
+        for (int i = 0; i < k; i++) {
+            sum += temp[i] * temp[i] * temp[i];
+        }
+    }
+    if (k == 4) {
+        for (int i = 0; i < k; i++) {
+            sum += temp[i] * temp[i] * temp[i] * temp[i];
+        }
+    }
+    if (sum == number) return 1;
+    else return 0;
+}
+void PrintN(int m, int n) {
+    for (int mm = m + 1; mm < n; mm++) {
+        if (narcissistic(mm)) {
+            printf("%d\n", mm);
+        }
+    }
+}
+
+-----------------------------------
+void reverse(int a[], int start, int end) {
+    while (start < end) {int temp = a[start];a[start] = a[end];a[end] = temp;
+        start++;end--;}}
+
+void ArrayShift(int a[], int n, int m) {
+    m = m % n;reverse(a, 0, n - 1);
+    reverse(a, 0, m - 1);reverse(a, m, n - 1);
+}
+
