@@ -1,0 +1,46 @@
+#include <stdio.h>
+#define N 10
+
+int main() {
+	int n, arr[N], max, x, temp;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	max = 0;
+	for (int j = 1; j < n; j++) {
+		if (arr[j] > arr[max]) {
+			max = j;
+		}
+	}
+	printf("%d %d\n", arr[max], max);
+	return 0;
+}
+
+------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char* str, int length) {
+    if (length <= 0) {
+        return;
+    }
+
+    if (str[length - 1] != '\0') {
+        putchar(str[length - 1]);
+    }
+
+    reverseString(str, length - 1);
+}
+
+int main() {
+    char str[81];
+    fgets(str, sizeof(str), stdin);
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+    reverseString(str, len);
+    putchar('\n');
+    return 0;
+}
