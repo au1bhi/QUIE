@@ -1,0 +1,115 @@
+#include <stdio.h>
+int main() {
+	long long a,b=0;
+	scanf("%lld", &a);
+	if (a == 0) {
+		printf("0 ");
+		return 0;
+	}
+	int dignum = 0;
+	while (a!=0)
+	{
+		b*= 10;
+		b += a % 10;
+		dignum++;
+		a /= 10;
+	}
+	for (int i = 1; i <= dignum; i++) {
+		printf("%lld ", b % 10);
+		b /= 10;
+	}
+}
+
+--------------------------------------------
+#include<stdio.h>
+#include<math.h>
+
+int narcissistic(int num);
+void findNarcissistic(int m, int n);
+
+int main() {
+    int m, n;
+
+    while (scanf("%d %d", &m, &n) == 2) {
+        findNarcissistic(m, n);
+    }
+
+    return 0;
+}
+
+int narcissistic(int num) {
+    int originalNum = num;
+    int sum = 0;
+
+    while (num > 0) {
+        int digit = num % 10;
+        sum += pow(digit, 3);
+        num /= 10;
+    }
+
+    return (sum == originalNum);
+}
+
+void findNarcissistic(int m, int n) {
+    int found = 0;
+
+    for (int i = m; i <= n; i++) {
+        if (narcissistic(i)) {
+            printf("%d ", i);
+            found = 1;
+        }
+    }
+
+    if (found == 0) {
+        printf("no");
+    }
+
+    printf("\n");
+}
+
+--------------------------------------------
+
+#include<stdio.h>
+
+int test(int x);
+
+int main() {
+    int m, n, t,whe1=0;
+    scanf("%d %d", &m, &n);
+    if (m > n) {
+        printf("None");
+        return 0;
+    }
+
+    for (t = m; t <= n; t++) {
+        if (test(t) == 0)whe1++;
+    }
+    if (whe1 == 0) printf("None");
+    return 0;
+}
+
+int test(int x) {
+    int sum = 0,flag=0,whe0=0;
+    for (int i = 1; i < x; i++) {
+        if (x % i == 0) {
+            sum += i;
+            flag = 1;
+        }
+    }
+
+    if (x == sum) {
+        printf("%d = 1", x);
+
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0) {
+                printf(" + %d", i);
+            }
+        }
+
+        printf("\n");
+        return whe0;
+    }
+    if (flag == 0) {
+        printf("None\n");
+    }
+}
