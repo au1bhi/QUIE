@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    cout<<(a+b)*c<<" "<<a+b*c;
+}
+
+-----------------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<a+b-16<<endl<<a+b-3<<endl<<a+b-1<<endl<<a+b;
+}
+
+-----------------------------------------
+#include<iostream>
+using namespace std;
+int main() {
+    float a; int b; char c; float a2;
+    cin >> a >> b >> c >> a2;
+    scanf("%f %d %c %f", &a, &b, &c, &a2);
+    printf("%c %d %.2lf %.2lf", c, b, a, a2);
+}
+
+-----------------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"       i-i-i-i-i"<<endl;
+cout<<"    ~~~~~~~~~~~~~~~"<<endl;
+cout<<"   | : H-a-p-p-y : |"<<endl;
+cout<<" ---------------------"<<endl;
+cout<<"| : B-i-r-t-h-d-a-y : |"<<endl;
+cout<<"-----------------------";
+}
+
+-----------------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    cout<<"Name   Counter"<<endl;
+    cout<<"--------------"<<endl;
+    printf("John%10d\n",a);
+    printf("Sally%9d\n",b);
+    printf("Tom%11d\n",c);
+    cout<<"--------------"<<endl;
+    printf("Total%9d\n",(a+b+c));
+}
+-----------------------------------------
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;char c;
+    float tem;
+    cin>>a>>b>>c;
+    tem = b == 97 ? a * 7.93 : b == 93 ? a * 7.44 : a * 6.95;
+    printf("%.2f", c == 'm' ? tem * 0.95 : tem * 0.97);
+}
+-----------------------------------------
