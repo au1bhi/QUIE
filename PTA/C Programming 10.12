@@ -1,0 +1,37 @@
+#include<stdio.h>
+using namespace std;
+int main() {
+    double H,W;
+    scanf("%lf %lf", &H, &W);
+    printf("身高%d英尺%.2lf英寸,体重%.2lf磅", (int)(H / 2.54 / 12), (H / 2.54) - (int)(H / 2.54 / 12)*12, W / 0.45359237);
+}
+
+---------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main() {
+	long int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	cout << "Average为(" << a << "+" << b << "+" << c << "+" << d << ")/4=";
+	printf("%.2lf", (double)(a + b + c + d)/4);
+
+}
+
+---------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main() {
+	double r,PI=3.14;
+	scanf("r=%lf",&r);
+	printf("S=%-8.2lf",PI*r*r);
+}
+
+---------------------------------------------------------
+#include<stdio.h>
+#include<math.h>
+int main(){
+    double d;
+    scanf("%lf",&d);
+    printf("%d", (int)round(d)); 
+}
+---------------------------------------------------------
