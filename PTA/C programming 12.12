@@ -10,6 +10,30 @@ int main(){
 }
 
 ----------------------------------------------
+#include<stdio.h>
+#define N 10
+void hanoi(int n, char a[], char b[], char c[]) {
+    if (n == 1) {
+        printf("%s->%s\n", a, c);
+    }
+    else {
+        hanoi(n - 1, a, c, b);
+        printf("%s->%s\n", a, c);
+        hanoi(n - 1, b, a, c);
+    }
+}
+int main() {
+    int n;
+    char a[N], b[N], c[N];
+    scanf("%d", &n);
+    scanf("%s", a);
+    scanf("%s", b);
+    scanf("%s", c);
+    hanoi(n, a, b, c);
+    return 0;
+}
+
+----------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 int a[11],b[11];
@@ -40,4 +64,4 @@ int main()
     return 0;
 }
 
-----------------------------------------------
+
