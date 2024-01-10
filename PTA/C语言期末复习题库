@@ -1,3 +1,29 @@
+ADABCDCAACACADBC
+CD    ABCD    AE   ACD    BD
+-----------------------------
+#include<math.h>
+f=fabs(x+1);
+x>=0&&x<=5
+x,f
+-----------------------------
+outStr[MAX_LEN + 1]
+j++
+outStr[j] = '\0'
+-----------------------------
+&year,&month,&day
+month
+default
+-----------------------------
+f[i-1]+f[i-2]
+i=0
+i%4==0 && i!=0
+-----------------------------
+d1=1;d1<10;d1++
+d2=0;d2<10;d2++
+d3=0;d3<10;d3++
+d1*d1*d1+d2*d2*d2+d3*d3*d3==n
+-----------------------------
+
 #include <stdio.h>
 int cf(int a) {
     int t = 1, res = 1;
