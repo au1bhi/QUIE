@@ -6,7 +6,7 @@ f=fabs(x+1);
 x>=0&&x<=5
 x,f
 -----------------------------
-outStr[MAX_LEN + 1]
+char outStr[MAX_LEN + 1]
 j++
 outStr[j] = '\0'
 -----------------------------
