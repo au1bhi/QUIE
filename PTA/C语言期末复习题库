@@ -23,7 +23,36 @@ d2=0;d2<10;d2++
 d3=0;d3<10;d3++
 d1*d1*d1+d2*d2*d2+d3*d3*d3==n
 -----------------------------
+void delchar(char* str, char c) {
+    int i, j;
+    for (i = 0, j = 0; str[i] != '\0'; i++) {
+        if (str[i] != c) {
+            str[j++] = str[i];
+        }
+    }
+    str[j] = '\0';
+}
 
+--------------------------------------
+void sum_diff( float op1, float op2, float *psum, float *pdiff ){
+    *psum=op1+op2;
+    *pdiff=op1-op2;
+}
+
+--------------------------------------
+void sum_diff( float op1, float op2, float *psum, float *pdiff ){
+    *psum=op1+op2;
+    *pdiff=op1-op2;
+}
+
+--------------------------------------
+int Ack( int m, int n ){
+    if (m==0)return n+1;
+    if (n==0 && m>0) Ack(m-1,1);
+    if (m>0 && n>0) Ack(m-1,Ack(m,n-1));
+}
+
+--------------------------------------
 #include <stdio.h>
 int cf(int a) {
     int t = 1, res = 1;
